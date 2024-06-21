@@ -1,0 +1,9 @@
+export { default as AboutPage } from "./AboutPage";
+export { default as CoursePage } from "./CoursePage";
+export { default as Courses } from "./Courses";
+export { default as Landing } from "./Landing";
+export { default as Login } from "./Login";
+export { default as Register } from "./Register";
+export { default as PricingPage } from "./PricingPage";
+export { default as ContactPage } from "./ContactPage";
+export { default as HomeLayout } from "./HomeLayout";
