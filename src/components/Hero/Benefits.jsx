@@ -14,7 +14,7 @@ const Benefits = () => {
             eget habitasse in velit fringilla feugiat senectus in.
           </p>
         </div>
-        <div className="btn border-none bg-whiteOne mt-5 ">
+        <div className="btn border-none bg-white99 mt-5 hover:bg-primary ">
           <p>View All</p>
         </div>
       </div>
@@ -26,7 +26,7 @@ const Benefits = () => {
           const { id, name, title, description } = benefit;
 
           return (
-            <div key={index} className="bg-whiteFour shadow-sm rounded-md">
+            <div key={index} className="bg-white99 shadow-sm rounded-md">
               <div className="flex flex-col items-end justify-between gap-10 p-10">
                 <div className="text-6xl text-right font-bold"> {title} </div>
                 <div className="space-y-5">
@@ -38,7 +38,7 @@ const Benefits = () => {
                 <MdArrowOutward
                   size={40}
                   color="#FFBF66"
-                  className="bg-whiteTwo rounded-md"
+                  className="bg-white95 rounded-md"
                 />
               </div>
             </div>

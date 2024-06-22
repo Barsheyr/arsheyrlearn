@@ -3,14 +3,14 @@ import { Navbar, Loading, Header, Footer } from "../components";
 
 const HomeLayout = () => {
   return (
-    <div className="font-primary bg-[#F7F7F8]">
+    <div className="font-primary bg-white95">
       <Header />
       <Navbar />
       {/* <Loading /> */}
       <section className="align-element py-20 font-primary">
         <Outlet />
       </section>
-      <div className="bg-whiteFour">
+      <div className="bg-white99">
         <Footer />
       </div>
     </div>

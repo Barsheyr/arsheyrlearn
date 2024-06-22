@@ -1,7 +1,12 @@
 import React from "react";
+import { CourseHero } from "../components";
 
 const Courses = () => {
-  return <div>Courses</div>;
+  return (
+    <section>
+      <CourseHero />
+    </section>
+  );
 };
 
 export default Courses;

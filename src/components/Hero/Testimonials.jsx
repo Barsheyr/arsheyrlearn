@@ -13,7 +13,7 @@ const Testimonials = () => {
             eget habitasse in velit fringilla feugiat senectus in.
           </p>
         </div>
-        <div className="btn border-none bg-whiteOne mt-5 hover:bg-primary ">
+        <div className="btn border-none bg-white95 mt-5 hover:bg-primary ">
           <p>View All</p>
         </div>
       </div>
@@ -25,16 +25,16 @@ const Testimonials = () => {
 
           return (
             <div key={index} className="">
-              <div className="bg-whiteFour p-10">
+              <div className="bg-white99 p-10 rounded-t-xl">
                 <p className=" text-sm "> {description} </p>
               </div>
 
-              <div className="flex flex-row items-center justify-between p-5 bg-whiteTwo">
+              <div className="flex flex-row items-center justify-between p-5 bg-white97">
                 <div className="flex flex-row items-center gap-5">
                   <img src={image} alt="" />
                   <p className="font-semibold text-grey20"> {name} </p>
                 </div>
-                <div className="btn border-none bg-whiteOne hover:bg-orange70 ">
+                <div className="btn border-none bg-white99 hover:bg-orange70 ">
                   {btn}
                 </div>
               </div>

@@ -14,7 +14,7 @@ const Courses = () => {
             eget habitasse in velit fringilla feugiat senectus in.
           </p>
         </div>
-        <div className="btn border-none bg-whiteOne mt-5 hover:bg-primary ">
+        <div className="btn border-none bg-white97 mt-5 hover:bg-primary ">
           <p>View All</p>
         </div>
       </div>
@@ -35,10 +35,10 @@ const Courses = () => {
           } = courseCard;
 
           return (
-            <div key={index} className="bg-whiteFour shadow-sm rounded-md">
-              <div className="p-10 space-y-5">
+            <div key={index} className="bg-white99 shadow-sm rounded-md">
+              <div className="lg:p-10 p-5 space-y-5">
                 <img src={image} alt="" className="w-full" />
-                <div className="flex lg:flex-row flex-col lg:items-center justify-between">
+                <div className="flex lg:flex-row flex-col lg:items-center justify-between space-y-5">
                   <div className="flex flex-row gap-5">
                     <p className="bg-whiteThree border border-gray-300 rounded-md text-sm p-2">
                       {date}
@@ -58,7 +58,7 @@ const Courses = () => {
 
                   <NavLink
                     to=""
-                    className="btn btn-md w-full bg-whiteTwo text-grey15 hover:text-black hover:bg-orange70 border-none"
+                    className="btn btn-md w-full bg-white95 text-grey15 hover:text-black hover:bg-orange70 border-none"
                   >
                     {btn}
                   </NavLink>
