@@ -80,7 +80,7 @@ const Login = () => {
       {/* form */}
       <Form
         method="post"
-        className="card w-96 lg:w-full p-8 bg-base-100 shadow-2xl flex flex-col gap-y-4"
+        className="card w-80 md:w-full lg:w-full p-8 bg-base-100 shadow-2xl flex flex-col gap-y-4"
       >
         <h4 className="text-center text-3xl font-bold">Login</h4>
         <p className="text-center text-sm font-light">
