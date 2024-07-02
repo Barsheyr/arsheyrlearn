@@ -16,7 +16,7 @@ const Hero = () => {
   return (
     <section>
       <div className="flex flex-col items-center space-y-5">
-        <div className="bg-whiteFour p-5 shadow-sm flex flex-row items-center justify-between gap-5">
+        <div className="bg-white99 p-5 shadow-sm flex flex-row items-center justify-between gap-5">
           <div className="bg-orange90 p-2">
             <img src={heroIcon} alt="" />
           </div>

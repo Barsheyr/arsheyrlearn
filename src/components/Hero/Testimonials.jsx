@@ -13,7 +13,7 @@ const Testimonials = () => {
             eget habitasse in velit fringilla feugiat senectus in.
           </p>
         </div>
-        <div className="btn border-none bg-white95 mt-5 hover:bg-primary ">
+        <div className="btn border-none bg-white99 mt-5 hover:bg-primary ">
           <p>View All</p>
         </div>
       </div>

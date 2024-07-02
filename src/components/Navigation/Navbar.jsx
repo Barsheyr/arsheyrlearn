@@ -28,8 +28,10 @@ const Navbar = () => {
 
         <div className="navbar-end">
           {/* THEME ICONS */}
-          <div className="flex items-center justify-between gap-5 ml-4">
-            <NavLink to="/register">Sign Up</NavLink>
+          <div className="flex items-center justify-between gap-3">
+            <NavLink to="/register" className="text-sm">
+              Sign Up
+            </NavLink>
             <NavLink
               to="/login"
               className="btn bg-primary text-white hover:text-black"
@@ -40,7 +42,10 @@ const Navbar = () => {
         </div>
 
         {/* mobile nav icons */}
-        <button className="lg:hidden" onClick={() => setMobileNav(!mobileNav)}>
+        <button
+          className="lg:hidden ml-4"
+          onClick={() => setMobileNav(!mobileNav)}
+        >
           {mobileNav ? (
             <IoCloseOutline className="text-3xl text-primary" />
           ) : (

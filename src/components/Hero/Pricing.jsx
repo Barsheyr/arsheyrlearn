@@ -44,7 +44,7 @@ const Pricing = () => {
       </div>
 
       {isHourly ? (
-        <div className="grid lg:grid-cols-2 gap-4 bg-white99 p-10 mt-20 rounded-lg">
+        <div className="grid lg:grid-cols-2 gap-4 bg-white99 lg:p-10 p-5 mt-20 rounded-lg">
           {pricingCards.map((pricingCard, index) => {
             const {
               id,
@@ -60,115 +60,103 @@ const Pricing = () => {
 
             return (
               <div key={index}>
-                <div className="rounded-md shadow-md bg-white97 p-10 space-y-10">
+                <div className="rounded-md shadow-md bg-white97 lg:p-10 p-5 space-y-10">
                   <h2 className="text-xl font-medium text-center bg-orange90 p-5">
                     {title}
                   </h2>
-                  <p className="text-5xl text-center">
+                  <p className="lg:text-5xl text-xl text-center">
                     {amount}
                     <span className="text-sm font-semibold"> /month </span>
                   </p>
 
-                  <ul className="list-disc p-10 bg-white rounded-lg space-y-10">
+                  <ul className="list-disc lg:p-5 p-3 bg-white rounded-lg space-y-5">
                     <h2 className="text-center font-medium text-grey15">
                       Available Features
                     </h2>
-                    <div className="flex flow-row items-center gap-5 px-5 py-2 border border-gray-300 rounded-md">
-                      <div className="bg-orange95 p-2 border ">
+                    <div className="flex flow-row items-center gap-5 lg:p-5 p-2 border border-gray-300 rounded-md">
+                      <div className="bg-orange95 p-1 border ">
                         <IoMdCheckmark />
                       </div>
-                      <p> {textOne} </p>
+                      <p className="text-xs lg:text-base"> {textOne} </p>
                     </div>
-                    <div className="flex flow-row items-center gap-5 px-5 py-2 border border-gray-300 rounded-md">
+                    <div className="flex flow-row items-center gap-5 lg:p-5 p-2 border border-gray-300 rounded-md">
                       <div className="bg-orange95 p-2 border ">
                         <IoMdCheckmark />
                       </div>
-                      <p> {textTwo} </p>
+                      <p className="text-xs lg:text-base"> {textTwo} </p>
                     </div>
-                    <div className="flex flow-row items-center gap-5 px-5 py-2 border border-gray-300 rounded-md">
+                    <div className="flex flow-row items-center gap-5 lg:p-5 p-2 border border-gray-300 rounded-md">
                       <div className="bg-orange95 p-2 border ">
                         <IoMdCheckmark />
                       </div>
-                      <p> {textThree} </p>
+                      <p className="text-xs lg:text-base"> {textThree} </p>
                     </div>
                   </ul>
                 </div>
               </div>
             );
           })}
-          {/* <div className="p-4 border rounded-md shadow-md">
-            <h2 className="text-xl font-semibold">Basic</h2>
-            <p className="text-2xl">$10/hr</p>
-            <ul className="list-disc pl-5">
-              <li>Feature 1</li>
-              <li>Feature 2</li>
-              <li>Feature 3</li>
-            </ul>
-          </div>
-          <div className="p-4 border rounded-md shadow-md">
-            <h2 className="text-xl font-semibold">Standard</h2>
-            <p className="text-2xl">$20/hr</p>
-            <ul className="list-disc pl-5">
-              <li>Feature 1</li>
-              <li>Feature 2</li>
-              <li>Feature 3</li>
-            </ul>
-          </div> */}
         </div>
       ) : (
-        <div className="grid lg:grid-cols-2 gap-4 bg-whiteFour p-10 mt-20 rounded-lg">
-          <div className="p-4 border rounded-md shadow-md">
-            <h2 className="text-xl font-semibold">Basic</h2>
-            <p className="text-2xl">$1000/year</p>
-            <ul className="list-disc pl-5">
-              <li>Feature 1</li>
-              <li>Feature 2</li>
-              <li>Feature 3</li>
-            </ul>
-          </div>
-          <div className="p-4 border rounded-md shadow-md bg-whiteTwo space-y-10">
-            <h2 className="text-xl font-medium text-center bg-orange90 p-4">
-              Pro Plan
-            </h2>
-            <p className="text-5xl text-center">
-              $800 <span className="text-sm font-semibold"> /year </span>
-            </p>
-            <ul className="list-disc p-10 bg-white rounded-lg space-y-10">
-              <h2 className="text-center font-medium text-grey15">
-                Available Features
-              </h2>
-              <div className="flex flow-row items-center gap-5 px-5 py-2 border border-gray-300 rounded-md">
-                <div className="bg-orange95 p-2 border ">
-                  <IoMdCheckmark />
+        <div className="grid lg:grid-cols-2 gap-4 bg-white99 lg:p-10 p-5 mt-20 rounded-lg">
+          {pricingCards.map((pricingCard, index) => {
+            const {
+              id,
+              title,
+              amount,
+              features,
+              textOne,
+              textTwo,
+              textThree,
+              textFour,
+              textFive,
+              amountYear,
+            } = pricingCard;
+
+            return (
+              <div key={index}>
+                <div className="rounded-md shadow-md bg-white97 lg:p-10 p-5 space-y-10">
+                  <h2 className="text-xl font-medium text-center bg-orange90 p-5">
+                    {title}
+                  </h2>
+                  <p className="lg:text-5xl text-xl text-center">
+                    {amountYear}
+                    <span className="text-sm font-semibold"> / year </span>
+                  </p>
+
+                  <ul className="list-disc lg:p-5 p-3 bg-white rounded-lg space-y-5">
+                    <h2 className="text-center font-medium text-grey15">
+                      Available Features
+                    </h2>
+                    <div className="flex flow-row items-center gap-5 lg:p-5 p-2 border border-gray-300 rounded-md">
+                      <div className="bg-orange95 p-1 border ">
+                        <IoMdCheckmark />
+                      </div>
+                      <p className="text-xs lg:text-base"> {textOne} </p>
+                    </div>
+                    <div className="flex flow-row items-center gap-5 lg:p-5 p-2 border border-gray-300 rounded-md">
+                      <div className="bg-orange95 p-2 border ">
+                        <IoMdCheckmark />
+                      </div>
+                      <p className="text-xs lg:text-base"> {textTwo} </p>
+                    </div>
+                    <div className="flex flow-row items-center gap-5 lg:p-5 p-2 border border-gray-300 rounded-md">
+                      <div className="bg-orange95 p-2 border ">
+                        <IoMdCheckmark />
+                      </div>
+                      <p className="text-xs lg:text-base"> {textThree} </p>
+                    </div>
+                    <div className="flex flow-row items-center gap-5 lg:p-5 p-2 border border-gray-300 rounded-md">
+                      <div className="bg-orange95 p-2 border ">
+                        <IoMdCheckmark />
+                      </div>
+                      <p className="text-xs lg:text-base"> {textFour} </p>
+                    </div>
+                  </ul>
                 </div>
-                <p> Unlimited access to all courses </p>
               </div>
-              <div className="flex flow-row items-center gap-5 px-5 py-2 border border-gray-300 rounded-md">
-                <div className="bg-orange95 p-2 border ">
-                  <IoMdCheckmark />
-                </div>
-                <p> Unlimited course materials and resources </p>
-              </div>
-              <div className="flex flow-row items-center gap-5 px-5 py-2 border border-gray-300 rounded-md">
-                <div className="bg-orange95 p-2 border ">
-                  <IoMdCheckmark />
-                </div>
-                <p> Priority support from instructor </p>
-              </div>
-              <div className="flex flow-row items-center gap-5 px-5 py-2 border border-gray-300 rounded-md">
-                <div className="bg-orange95 p-2 border ">
-                  <IoMdCheckmark />
-                </div>
-                <p> Course completion certificate </p>
-              </div>
-              <div className="flex flow-row items-center gap-5 px-5 py-2 border border-gray-300 rounded-md">
-                <div className="bg-orange95 p-2 border ">
-                  <IoMdCheckmark />
-                </div>
-                <p> Ad-free experience </p>
-              </div>
-            </ul>
-          </div>
+            );
+          })}
         </div>
       )}
     </div>
