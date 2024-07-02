@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { BsCart3, BsMoonFill, BsSunFill } from "react-icons/bs";
 import { FaBarsStaggered } from "react-icons/fa6";
 import { NavLink } from "react-router-dom";
 import { Logo } from "../../assets/images";
 import NavLinks from "../Navigation/NavlLinks";
+import { IoMenuOutline, IoCloseOutline } from "react-icons/io5";
+import MobileNav from "./MobileNav";
 
 const Navbar = () => {
+  const [mobileNav, setMobileNav] = useState(false);
+
   return (
     <nav className="mt-5">
       <div className="navbar align-element">
@@ -35,17 +39,23 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* <div className="dropdown">
-          <label tabIndex={0} className="btn btn-ghost lg:hidden">
-            <FaBarsStaggered className="h-6 w-6" />
-          </label>
-          <ul
-            tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-200 rounded-box -ml-44 w-56"
-          >
-            <NavLinks />
-          </ul>
-        </div> */}
+        {/* mobile nav icons */}
+        <button className="lg:hidden" onClick={() => setMobileNav(!mobileNav)}>
+          {mobileNav ? (
+            <IoCloseOutline className="text-3xl text-primary" />
+          ) : (
+            <IoMenuOutline className="text-3xl text-primary" />
+          )}
+        </button>
+
+        <div
+          className={` ${
+            mobileNav ? "left-0" : "-left-full"
+          } fixed top-0 bottom-0 w-[60vw] z-20 lg:hidden transition-all bg-white`}
+          onClick={() => setMobileNav(!mobileNav)}
+        >
+          <MobileNav />
+        </div>
       </div>
     </nav>
   );

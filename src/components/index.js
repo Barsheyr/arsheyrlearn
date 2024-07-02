@@ -1,4 +1,5 @@
 export { default as Navbar } from "./Navigation/Navbar";
+export { default as MobileNav } from "./Navigation/MobileNav";
 export { default as Footer } from "./Footer";
 export { default as Loading } from "./Loading";
 export { default as Header } from "./Header";
