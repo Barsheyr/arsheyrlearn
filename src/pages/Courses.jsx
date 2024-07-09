@@ -17,6 +17,9 @@ const Courses = () => {
           fit for your learning journey.
         </p>
       </div>
+
+      <div className="w-[100%] h-0.5 bg-gray-300 mt-20"></div>
+
       <div>
         {coursePages.map((coursePage) => {
           return <CourseHero coursePage={coursePage} key={coursePage.id} />;
