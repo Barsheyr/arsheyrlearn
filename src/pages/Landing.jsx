@@ -1,5 +1,12 @@
 import React from "react";
-import { Hero, Benefits, Testimonials, Courses, Pricing } from "../components";
+import {
+  Hero,
+  Benefits,
+  Testimonials,
+  Courses,
+  Pricing,
+  FAQ,
+} from "../components";
 
 const Landing = () => {
   return (
@@ -9,6 +16,7 @@ const Landing = () => {
       <Courses />
       <Testimonials />
       <Pricing />
+      <FAQ />
     </>
   );
 };

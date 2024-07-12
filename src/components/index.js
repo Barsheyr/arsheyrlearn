@@ -13,3 +13,4 @@ export { default as Testimonials } from "./Hero/Testimonials";
 export { default as Pricing } from "./Hero/Pricing";
 export { default as CourseHero } from "./Courses/CourseHero";
 export { default as AboutHero } from "./About/AboutHero";
+export { default as FAQ } from "./Hero/FAQ";
