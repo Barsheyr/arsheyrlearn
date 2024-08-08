@@ -3,6 +3,7 @@ import { Form, Link } from "react-router-dom";
 import { MdEmail } from "react-icons/md";
 import { FaPhone } from "react-icons/fa";
 import { RiMapPin2Fill } from "react-icons/ri";
+import { FaFacebook, FaTwitter, FaLinkedin } from "react-icons/fa";
 
 const ContactPage = () => {
   return (
@@ -26,16 +27,16 @@ const ContactPage = () => {
         >
           <div className="grid grid-cols-2 gap-10">
             <FormInput
-              type="email"
-              label="email"
+              type="text"
+              label="First Name"
               name="identifier"
-              placeholder="Enter your Email"
+              placeholder="Enter your First Name"
             />
             <FormInput
-              type="email"
-              label="email"
+              type="text"
+              label="Last Name"
               name="identifier"
-              placeholder="Enter your Email"
+              placeholder="Enter your Last Name"
             />
           </div>
           <div className="grid grid-cols-2 gap-10">
@@ -46,40 +47,58 @@ const ContactPage = () => {
               placeholder="Enter your Email"
             />
             <FormInput
-              type="email"
-              label="email"
+              type="number"
+              label="Phone Number"
               name="identifier"
-              placeholder="Enter your Email"
+              placeholder="Enter your Phone Number"
             />
           </div>
           <FormInput
-            type="email"
-            label="email"
+            type="text"
+            label="Subject"
             name="identifier"
-            placeholder="Enter your Email"
+            placeholder="Enter your Subject"
           />
           <textarea
-            placeholder="Bio"
+            placeholder="Message...."
             class="textarea textarea-bordered textarea-lg w-full"
           ></textarea>
         </Form>
 
-        <div className="bg-white px-20 py-10 shadow-lg space-y-10">
-          <div className="bg-slate-200 p-3 rounded-md flex flex-col items-center gap-10">
-            <MdEmail size={30} />
-            <p> support@skillbridge.com </p>
+        <div className="bg-white px-20 py-10 space-y-10">
+          <div className="bg-slate-100 p-3 rounded-md flex flex-col items-center gap-10">
+            <div className="bg-white p-3 rounded-md">
+              <MdEmail size={30} />
+            </div>
+            <p className="text-sm"> support@skillbridge.com </p>
           </div>
-          <div className="bg-slate-200 p-3 rounded-md flex flex-col items-center gap-10">
-            <FaPhone size={30} />
-            <p> +90 929434822 </p>
+          <div className="bg-slate-100 p-3 rounded-md flex flex-col items-center gap-10">
+            <div className="bg-white p-3 rounded-md">
+              <FaPhone size={30} />
+            </div>
+            <p className="text-sm"> +90 929434822 </p>
           </div>
-          <div className="bg-slate-200 p-3 rounded-md flex flex-col items-center gap-10">
-            <RiMapPin2Fill size={30} />
-            <p> SkillBridge HQ, 123 Learning Lane, Education City, EC 45678 </p>
+          <div className="bg-slate-100 p-3 rounded-md flex flex-col items-center gap-10">
+            <div className="bg-white p-3 rounded-md">
+              <RiMapPin2Fill size={30} />
+            </div>
+            <p className="text-sm">
+              SkillBridge HQ, 123 Learning Lane, Education City, EC 45678
+            </p>
           </div>
-          <div className="bg-slate-200 p-3 rounded-md flex flex-col items-center gap-10">
-            <MdEmail size={30} />
-            <p> </p>
+          <div className="bg-slate-100 p-3 rounded-md flex flex-col items-center gap-10">
+            <div className="flex flex-row gap-5">
+              <div className="bg-white p-3 rounded-md">
+                <FaFacebook size={30} />
+              </div>
+              <div className="bg-white p-3 rounded-md">
+                <FaLinkedin size={30} />
+              </div>
+              <div className="bg-white p-3 rounded-md">
+                <FaTwitter size={30} />
+              </div>
+            </div>
+            <p className=""> Social Links </p>
           </div>
         </div>
       </div>

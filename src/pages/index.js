@@ -7,3 +7,4 @@ export { default as Register } from "./Register";
 export { default as PricingPage } from "./PricingPage";
 export { default as ContactPage } from "./ContactPage";
 export { default as HomeLayout } from "./HomeLayout";
+export { default as CheckoutPage } from "./CheckoutPage";

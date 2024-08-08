@@ -2,6 +2,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 import {
   AboutPage,
+  CheckoutPage,
   ContactPage,
   CoursePage,
   Courses,
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
       {
         path: "/contact",
         element: <ContactPage />,
+      },
+      {
+        path: "/checkout",
+        element: <CheckoutPage />,
       },
       {
         path: "/login",

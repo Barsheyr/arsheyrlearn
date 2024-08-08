@@ -6,9 +6,12 @@ import { Logo } from "../../assets/images";
 import NavLinks from "../Navigation/NavlLinks";
 import { IoMenuOutline, IoCloseOutline } from "react-icons/io5";
 import MobileNav from "./MobileNav";
+import { useUserContext } from "../../context/user_context";
+import { FaUserMinus, FaUserPlus } from "react-icons/fa";
 
 const Navbar = () => {
   const [mobileNav, setMobileNav] = useState(false);
+  const { loginWithRedirect, myUser, logout } = useUserContext();
 
   return (
     <nav className="mt-5">
@@ -20,7 +23,7 @@ const Navbar = () => {
           </NavLink>
           {/* DROPDOWN */}
           <div className="hidden lg:flex">
-            <ul className="menu menu-horizontal ">
+            <ul className="menu menu-horizontal">
               <NavLinks />
             </ul>
           </div>
@@ -32,12 +35,26 @@ const Navbar = () => {
             <NavLink to="/register" className="text-sm">
               Sign Up
             </NavLink>
-            <NavLink
-              to="/login"
-              className="btn bg-primary text-white hover:text-black"
-            >
-              Login
-            </NavLink>
+
+            {myUser ? (
+              <button
+                type="button"
+                className="btn bg-primary text-white hover:text-black"
+                onClick={() => {
+                  localStorage.removeItem("user");
+                  logout({ returnTo: window.location.origin });
+                }}
+              >
+                Logout <FaUserMinus />
+              </button>
+            ) : (
+              <NavLink
+                to="/login"
+                className="btn bg-primary text-white hover:text-black"
+              >
+                Login
+              </NavLink>
+            )}
           </div>
         </div>
 
