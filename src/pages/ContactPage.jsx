@@ -20,10 +20,10 @@ const ContactPage = () => {
       </div>
       <div className="w-[100%] h-0.5 bg-gray-300 mt-20"></div>
 
-      <div className="grid grid-cols-3 py-20">
+      <div className="grid lg:grid-cols-3 py-20">
         <Form
           method="post"
-          className="col-span-2 w-80 md:w-full lg:w-full p-8 bg-base-100 shadow-lg flex flex-col gap-y-10"
+          className="lg:col-span-2 w-full md:w-full lg:w-full p-8 bg-base-100 shadow-lg flex flex-col gap-y-10"
         >
           <div className="grid grid-cols-2 gap-10">
             <FormInput
